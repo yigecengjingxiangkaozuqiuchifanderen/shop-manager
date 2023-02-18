@@ -2,6 +2,7 @@ package net.xdclass.shopmanager.service;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import net.xdclass.shopmanager.model.Banner;
 import net.xdclass.shopmanager.model.Employee;
 
 import java.util.List;

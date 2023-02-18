@@ -46,6 +46,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     public List<Map<String, Object>> selectByEmployeeDeptnu(Employee employee) {
         LambdaQueryWrapper<Employee> lambdaQueryWrapper = new LambdaQueryWrapper<>();
         lambdaQueryWrapper.eq(Employee::getDeptnu, employee.getDeptnu());
+        System.out.println("1111");
         return employeeMapper.selectMaps(lambdaQueryWrapper);
     }
 
