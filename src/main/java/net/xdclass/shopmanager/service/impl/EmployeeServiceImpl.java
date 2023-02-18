@@ -38,7 +38,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     public List<Map<String, Object>> selectByEmployeeJob() {
         LambdaQueryWrapper<Employee> lambdaQueryWrapper = new LambdaQueryWrapper<>();
         lambdaQueryWrapper.eq(Employee::getJob, "文员");
-        lambdaQueryWrapper.orderByAsc(Employee::getEmpno);
+        lambdaQueryWrapper.orderByAsc(Employee::getEname);
         return employeeMapper.selectMaps(lambdaQueryWrapper);
     }
 
