@@ -17,4 +17,6 @@ public interface EmployeeService {
     List<Map<String,Object>> selectByEmployeeDeptnu(Employee employee);
 
     IPage<Employee> selectPages(Integer pageNum, Integer pageSize);
+
+    List<Employee> otherlist();
 }

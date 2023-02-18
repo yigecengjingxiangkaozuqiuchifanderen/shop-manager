@@ -59,4 +59,11 @@ public class EmployeeServiceImpl implements EmployeeService {
         IPage<Employee> ipage = employeeMapper.selectPage(page,lambdaQueryWrapper);
         return ipage;
     }
+
+    @Override
+    public List<Employee> otherlist() {
+        LambdaQueryWrapper<Employee> lambdaQueryWrapper = new LambdaQueryWrapper<>();
+        lambdaQueryWrapper.eq(Employee::getJob, "文员");
+        return employeeMapper.selectList(lambdaQueryWrapper);
+    }
 }

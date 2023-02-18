@@ -41,4 +41,10 @@ public class EmployeeController {
         IPage<Employee> page = employeeService.selectPages(pageNum, pageSize);
         return JsonData.buildSuccess(page);
     }
+
+    @RequestMapping("/otherlist")
+    public JsonData otherlist(){
+        List<Employee> employeeList1 = employeeService.otherlist();
+        return JsonData.buildSuccess(employeeList1);
+    }
 }
